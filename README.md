@@ -1,4 +1,4 @@
-Ki-MODULAR
+Ki-Modular
 =========
 
 In Progress!! :)
