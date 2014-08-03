@@ -1,0 +1,221 @@
+
+
+/////////////////////////////////////////////////////////////////////////
+
+//
+// Variables
+//
+
+/////////////////////////////////////////////////////////////////////////
+// Table of contents 
+/////////////////////////////////////////////////////////////////////////
+//
+//
+// - - Colors
+// - - Font familys
+// - - Media queries
+// - - Paths 
+//
+// 
+/////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////
+// FRAMEWORK - DEFAULT COLORS   
+/////////////////////////////////////////////////////////////////////////
+
+// !!DONT CHANGE THE VARIABLE NAME WITH SUFFIX "fw-primary-x" - - All imported components / modules / sections is dependet on them!
+
+ 
+// P = Primary colors
+$p1:				#1a1a1a !default; 
+$p1:				#ffffff !default;
+
+// S = Secondary colors
+$s1:				#999999 !default;
+$s2:				#666666 !default;
+$s3:				#333333 !default;
+$s4:				#000000 !default;
+
+// Interaction 		(Hex only here)
+$link:				#d6d6d6 !default;
+$link-hover:		#d6d6d6 !default;
+$link-click:		#d6d6d6 !default;
+$link-disabled:		#d6d6d6 !default;
+
+
+/////////////////////////////////////////////////////////////////////////
+// PROJECT CORE COLORS   
+/////////////////////////////////////////////////////////////////////////
+
+
+// Core (overrides + additions)
+
+$m1:				#1a1a1a !default; 
+$m2:				#ffffff !default; 
+
+$p1:				#1a1a1a !default; 
+$p1:				#ffffff !default;
+
+$s1:				#999999 !default; 
+$s2:				#666666 !default;
+$s3:				#333333 !default;
+$s4:				#000000 !default;
+
+// Interaction 		
+$link:				#d6d6d6 !default;
+$link-hover:		#d6d6d6 !default;
+$link-click:		#d6d6d6 !default;
+$link-disabled:		#d6d6d6 !default;
+
+/////////////////////////////////////////////////////////////////////////
+// PURE COLORS
+/////////////////////////////////////////////////////////////////////////
+
+$red:			#f21c0a !default;
+$gray:			#ffb4a0 !default;
+$white:			#ffffff !default;
+$black:			#1a1a1a !default;
+
+
+/////////////////////////////////////////////////////////////////////////
+// COLOR VARIATIONS
+/////////////////////////////////////////////////////////////////////////
+
+$red-1:			#ffb4a0 !default;
+$red-2:			#f6756a !default;
+$red-3:			#f21c0a !default;
+$red-4:			#b90026 !default;
+
+$orange-1:		#f5cfa3 !default;
+$orange-2:		#edaa58 !default;
+$orange-3:		#e47d00 !default;
+$orange-4:		#cd5f0a !default;
+
+$purple-1:		#ffb4a0 !default;
+$purple-2:		#cb6999 !default;
+$purple-3:		#b01b65 !default;
+$purple-4:		#8c0855 !default;
+
+$violet-1:		#d0c3dc !default;
+$violet-2:		#a58ebe !default;
+$violet-3:		#7c5a9f !default;
+$violet-4:		#673376 !default;
+
+$blue-1:		#b4cbdc !default;
+$blue-2:		#7daac6 !default;
+$blue-3:		#2872a3 !default;
+$blue-4:		#225087 !default;
+
+$turq-1:		#b9dcd5 !default;
+$turq-2:		#7dc3b4 !default;
+$turq-3:		#3aa48d !default;
+$turq-4:		#1e7a67 !default;
+
+$green-1:		#dedcbb !default;
+$green-2:		#c3c385 !default;
+$green-3:		#a3a545 !default;
+$green-4:		#748120 !default;
+
+$gray-1:		#d7d7d7 !default;
+$gray-2:		#bcbcbc !default;
+$gray-3:		#9b9b9b !default;
+$gray-4:		#767676 !default;
+
+
+/////////////////////////////////////////////////////////////////////////
+// Colors 
+/////////////////////////////////////////////////////////////////////////
+
+
+// Primary colors
+$purple-h:		#73369e !default;
+$purple-c:		#642887 !default;
+$purple-t:		#4e256b !default;
+
+// Gray scale
+$white:			#ffffff !default;
+$black:			#000000 !default;
+
+$lightgrey-h:	#ffffff !default;
+$lightgrey-c:	#f6f6f6 !default;
+$lightgrey-t:	#dbdbdb !default;
+
+$darkgrey-h:	#858889 !default;
+$darkgrey-c:	#6c6f70 !default;
+$darkgrey-t:	#545556 !default;
+
+$clay-h:		#e1dbd2 !default;
+$clay-c:		#c7c2ba !default;
+$clay-t:		#aea9a2 !default;
+
+
+// Dark core
+$darkpurple-c:	#1f0f20 !default;
+
+
+// Accent colors (l=light, d=dark)
+$yellow-c:		#f9dc00 !default;
+$yellow-h:		#ffe75c !default;
+$yellow-t:		#eac907 !default;
+
+$orange-c:		#ff6319 !default;
+$orange-h:		#ff9166 !default;
+$orange-t:		#da552a !default;
+
+$green-c:		#bed600 !default;
+$green-h:		#dced00 !default;
+$green-t:		#adba00 !default;
+
+$blue-c:		#0083be !default;
+$blue-h:		#009fd6 !default;
+$blue-t:		#0070a3 !default;
+
+$turquoise-c:   #00b48c !default;
+$turquoise-h:	#00cc9b !default;
+$turquoise-t:	#009974 !default;
+
+$pink-c:		#c41b79 !default;
+$pink-h:		#db2190 !default;
+$pink-t:		#a91a6f !default;
+
+
+// Intaraction colors
+$link:			$turq-2 !default;
+$link-hover:	$turq-3 !default;
+$link-click:	$turq-4 !default;
+$link-disabled:	#d6d6d6 !default;
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// FONT FAMILYS
+/////////////////////////////////////////////////////////////////////////
+
+// B - BOLD
+$font-1: 'Polo-Halbfett', Arial, sans-serif;
+
+// M - Medium
+$font-2: 'Polo-Krftg', Arial, sans-serif;
+
+// L - Light
+$font-3: 'Polo-Buch', Arial, sans-serif;
+
+// R - Regular
+$font-4: 'Polo-Leicht', Arial, sans-serif;
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Paths for specific catalogs
+/////////////////////////////////////////////////////////////////////////
+
+// Image paths: 
+$imagepath: "/Images/";
+
+
+// Ex.
+// background: url('#{$imagepath}image-name.jpg') no-repeat;
+
+
+

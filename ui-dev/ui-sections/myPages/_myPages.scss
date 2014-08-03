@@ -1,0 +1,519 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+TEMPLATE
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - MOBILE AND TOUCH FIRST
+// - - HOVER?
+// - MOBILE WIDE
+// - PHABLET
+// - TABLET
+// - LAPTOP
+// - TV
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////// For SASS Compile
+// @import "../../ui--CORE/__dev-sass/_variables.scss";
+// @import "../../ui--CORE/__dev-sass/_mixins.scss";
+// @import "../../ui--CORE/__dev-sass/_breakpoint-mixins.scss";
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// CLASS NAME
+$className: eon-section-myPages;
+
+
+.#{$className}{
+
+overflow:visible;
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+	* {
+		display: none;
+	}
+
+	background:#fff;
+
+/* - - - Widget - - - */
+
+.eon-widget{
+	@include clearfix;
+	float:left;
+	color:#5b0000;
+	padding:15px 0;
+	font-size: 26px;
+	line-height: 26px;
+	height:90px;
+	position:relative;
+	
+
+
+
+	
+	&:first-child{
+		margin-left: 200px;
+	}
+
+	.chart {
+	  position: relative;
+	  display: inline-block;
+	  width: 110px;
+	  height: 110px;
+	  margin:0 0 0 40px;
+	  text-align: center;
+	}
+	.chart canvas {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	}
+
+	.chart2 {
+	  position: relative;
+	  display: inline-block;
+	  width: 110px;
+	  height: 110px;
+	  margin:0 0 0 40px;
+	  text-align: center;
+	}
+	.chart2 canvas {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	}
+
+	.percent {
+	  display: inline-block;
+	  line-height: 110px;
+	  z-index: 2;
+	  color:#fff;
+	}
+	.percent:after {
+	  content: '%';
+	  margin-left: 0.1em;
+	  font-size: .8em;
+	}
+
+
+	&.bills{
+		position:relative;
+		
+		.hhover{
+			display: none;
+				opacity: 0;
+				position:absolute;
+				overflow: hidden;
+				top:0;
+				left:0;
+				height: 90px;
+				width:100%;
+				background:#b80302;
+				line-height: 1.256;
+				padding:26px 0 0;
+				text-align:center;
+				font-size: 14px;
+				text-transform: uppercase;
+				color: #fff;
+				@include transition(opacity, 0.3s, ease, 0s)
+			}
+
+
+			.ttext{
+				position:absolute;
+				top:0px;
+				width: 100%;
+			}
+
+			.iicon{
+				position:absolute;
+				line-height: 22px;
+				font-size: 22px;
+				margin:5px 0 0;
+				color:#5b0000;
+				bottom: 0px;
+				width: 100%;
+			}
+
+
+		&:hover{
+			.hhover{
+				
+				opacity: 1;
+			}
+
+			.ttext{
+				top:32px;
+				@include transition(top, 0.3s, ease-out, 0s)
+			}
+
+			.iicon{
+				bottom: 17px;
+				@include transition(bottom, 0.3s, ease-out, 0s)
+			}
+
+		}
+	}
+
+
+	&:hover{
+		background:#b80302;
+		z-index:4;
+		margin:0 -1px;
+		padding-left:1px;
+		padding-right:1px;
+	}
+
+	 &.hover{
+ 		.fold-out{
+			visibility:visible;
+
+			div{
+					visibility: visible;
+					-webkit-transition: -webkit-transform .25s;
+					transition: transform .25s;
+					-webkit-transform: translate3d(0, 0, 0) rotateX(0deg);
+					transform: translate3d( 0, 0, 0) rotateX(0deg);
+
+					&.one{
+	
+					}
+
+					&.two{
+					opacity:1;
+					transition-delay: .22s;
+					-webkit-transition-delay: .22s;
+					}
+
+					&.three{
+					opacity: 1;
+					transition-delay: .44s;
+					-webkit-transition-delay: .44s;
+					
+					}
+			}
+
+		}
+ 	}
+
+
+	+ .eon-widget{
+		.eon-widget-body{
+			border-left: 1px solid #9b9b9b;;	
+		}
+		
+	}
+
+	.fold-out{
+		width:100%;
+		position:absolute;
+		top:100%;
+		left:0;
+		//background:#aa0602;
+		visibility:hidden;
+
+		-webkit-perspective: 1000px;
+		perspective: 1000px;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+
+
+		div{
+			height: 130px;
+			-webkit-transform-origin: 50% 0%;
+			transform-origin: 50% 0%;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+
+		}
+
+		.one{
+			background:#b80302;
+			-webkit-transform: translate3d(0, 0, 0) rotateX(-90deg);
+			transform: translate3d(0, 0, 0) rotateX(-90deg);
+		}
+
+		.two{
+			background:#910501;
+			opacity:0;
+			@include transition(opacity, 0s, ease-out, 1.22s);
+			-webkit-transform: translate3d(0, 0, 0) rotateX(-90deg);
+			transform: translate3d(0, 0, 0) rotateX(-90deg);
+		}
+
+		.three{
+			background:#7e0401;
+			opacity:0;
+			@include transition(opacity, 0s, ease-out, 1.44s);
+			-webkit-transform: translate3d(0, 0, 0) rotateX(-90deg);
+			transform: translate3d(0, 0, 0) rotateX(-90deg);
+
+
+		}
+	}
+
+}
+
+.eon-widget-body{
+	float:left;
+	padding: 0px 20px;
+	display:block;
+
+	.header{
+		font-size: 14px;
+		line-height: 14px;
+		text-transform: uppercase;
+		font-family:$font-2;
+		margin-top: 6px;
+		color:#9b9b9b;
+
+	}
+
+	.digits{
+		@include clearfix;
+		white-space:nowrap;
+		margin-top: 4px;
+		color:#767676;
+
+			.icon{
+				color:$red-3;
+			}
+
+			div{
+				float:left;
+			}
+
+			.value{
+				width:90px;
+				display:inline-block;
+			}
+
+			.suffix{
+				font-size: 14px;
+				line-height: 14px;
+				font-family:$font-2;
+				padding-left:6px;
+			}
+
+			.icon{
+				font-size: 28px;
+				line-height: 28px;
+			}
+
+
+	}
+
+} // .eon-widget-body END
+
+
+
+
+
+
+
+/* - - - - 
+
+
+	
+-webkit-transform: translate3d(0, 0, 0) rotateX(90deg);
+transform: translate3d(0, 0, 0) rotateX(90deg);
+-webkit-transform-origin: 50% 100%;
+transform-origin: 50% 100%;
+-webkit-transform-style: preserve-3d;
+transform-style: preserve-3d;
+
+
+*/
+	.bg-color{
+		//@include transition(background, 1.16s, ease, 0s);
+		background:#fff; // 999
+		height:90px;
+		//@include box-shadow(0, 0, 10px, rgba(0,0,0,.1), $inset: true);
+	
+		.show-myPages &{
+	
+			background:#fff;
+			
+		}
+
+	}
+
+
+		display:none;
+		//background:#6b0000;
+		height:90px;
+		overflow:hidden;
+		visibility: visible; // hidden
+		//position:absolute;
+		bottom:60px;
+		width:100%;
+		z-index:2;
+		
+
+	.show-myPages &{
+
+		visibility: visible;
+		background:#c60002;
+		-webkit-transition: -webkit-transform 1.16s;
+		transition: transform 1.16s;
+		-webkit-transform: translate3d(0, 0, 0) rotateX(0deg);
+		transform: translate3d( 0, 0, 0) rotateX(0deg);
+
+	}
+		
+		
+} // VP320 END
+
+
+
+// Place in bottom, hover in specific breakpoints??
+////////////////////////////////////////////////////////////////
+// NO-TOUCH
+////////////////////////////////////////////////////////////////
+
+@include hover {
+		
+		.hover &{
+			
+				a:hover{
+					
+				}
+
+		}
+
+} // hover END
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	@include media-min($bp-480) {
+		include: VP480;
+
+	} // media-min END	
+
+} // VP480 END
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+	
+	@include media-min($bp-768) {
+	
+		display:block;
+
+	} // media-min END		
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	@include media-min($bp-1024) {
+	
+		include: VP1024;
+
+	} // media-min END	
+	
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1366
+////////////////////////////////////////////////////////////////
+
+@include VP1366 {
+	
+	@include media-min($bp-1366) {
+	
+		include: VP1366;
+
+	} // media-min END	
+	
+} // VP1366 END
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+
+		.ie &{
+
+		}
+
+		.ie8 &{
+
+		}
+
+		.ie9 &{
+
+		}
+	
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+		
+		.no-js &{
+			
+		}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

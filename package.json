@@ -1,0 +1,30 @@
+{
+  "name": "grunt-project-base",
+  "version": "0.0.0",
+  "description": "",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "ip": "~0.3.0",
+    "require-directory": "~1.2.0",
+    "load-grunt-tasks": "~0.3.0",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-autoprefixer": "~0.7.1",
+    "grunt-include-replace": "~1.2.0",
+    "grunt-include-source": "~0.3.3",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-prettify": "^0.3.4",
+    "grunt-contrib-imagemin": "^0.5.0",
+    "grunt-svgmin": "^0.3.1",
+    "grunt-image-embed": "http://github.com/RobbinHabermehl/grunt-image-embed/tarball/tags/0.3.2",
+    "grunt-svg2png": "^0.2.1",
+    "grunt-ftpscript": "^0.1.7",
+    "load-grunt-config": "^0.7.1",
+    "grunt-contrib-compass": "^0.7.2"
+  }
+}

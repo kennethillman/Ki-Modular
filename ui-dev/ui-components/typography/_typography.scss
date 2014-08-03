@@ -1,0 +1,463 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* TYPOGRAPHY */ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - @font-face
+//
+// - VP320
+// - - - Base
+// - - - Headings
+// - - - Text formatting
+//
+// - VP480
+//
+// - VP768
+//
+// - VP1024
+//
+// - VP1366
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////
+// @font-face
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+	// B - BOLD
+	@font-face {
+		font-family: 'Polo-Halbfett';
+		src: url("fonts/P22B.eot");
+		src: url("fonts/P22B.eot?#iefix") format("embedded-opentype"), url("fonts/P22B.woff") format("woff"), url("fonts/P22B.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	// M - Medium
+	@font-face {
+		font-family: 'Polo-Krftg';
+		src: url("fonts/P22M.eot");
+		src: url("fonts/P22M.eot?#iefix") format("embedded-opentype"), url("fonts/P22M.woff") format("woff"), url("fonts/P22M.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	// R - Regular
+	@font-face {
+		font-family: 'Polo-Buch';
+		src: url("fonts/P22R.eot");
+		src: url("fonts/P22R.eot?#iefix") format("embedded-opentype"), url("fonts/P22R.woff") format("woff"), url("fonts/P22R.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	// L -Light
+	@font-face {
+		font-family: 'Polo-Leicht';
+		src: url("fonts/P22L.eot");
+		src: url("fonts/P22L.eot?#iefix") format("embedded-opentype"), url("fonts/P22L.woff") format("woff"), url("fonts/P22L.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+
+} // vp320 END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+	
+	.hide-mobile{
+		display: none;
+	}
+
+		.arial *{
+			font-family:arial,sans-serif!important;
+		}
+
+		.italic *{
+			font-style:italic!important;
+		}
+
+		h1,h2{
+			color:red;
+		}
+
+		h1{
+			font-family:$font-3;
+			font-weight:normal;
+			font-size:27px;
+			line-height:34px;
+			margin: 40px 0 20px;
+
+			/*&:after{
+				content:" 27/34/20 ";
+			} */
+
+		}
+		
+		h2{
+			font-family:$font-2;
+			font-weight:normal;
+			font-size:18px;
+			line-height:23px;
+			margin:0 0 3px;
+			&.light{
+				font-family:$font-4;
+			}
+
+			/* &:after{
+				content:" 18/23/3 ";
+			}*/
+		}
+
+		h3{
+			font-family:$font-2;
+			font-weight:normal;
+			font-size:16px;
+			line-height:21px;
+			margin:0 0 6px;
+			&.light{
+				font-family:$font-4;
+			}
+
+			/*&:after{
+				content:" 16/21/6 ";
+			}*/
+		}
+
+		p{
+			font-family:$font-3;
+			font-weight:normal;
+			font-size:15px;
+			line-height:21px;
+			margin:0 0 15px;
+
+			/*&:after{
+			 	content:" 15/21/15 ";
+			} */
+
+			&.preamble{
+				// font-weight:bold;
+				font-size:18px;
+				line-height:23px;
+				margin:0 0 15px;
+
+				/*&:after{
+					content:" 18/23/15 ";
+				}*/
+
+			}
+
+			&.small-text{
+				// font-weight:bold;
+				font-size:14px;
+				line-height:17px;
+				margin:0 0 15px;
+
+				/*&:after{
+					content:" 14/17/15 ";
+				}*/
+
+			}
+
+			&.light{
+				font-family:$font-4;
+			}
+
+
+			&.f18{
+				font-size:18px;
+				line-height:1.256;
+			}
+
+			&.f17{
+				font-size:17px;
+				line-height:1.256;
+			}
+
+			&.f16{
+				font-size:16px;
+				line-height:1.256;
+			}
+
+			&.f15{
+				font-size:15px;
+				line-height:1.256;
+			}
+
+			&.f14{
+				font-size:14px;
+				line-height:1.256;
+			}
+
+			&.f13{
+				font-size:13px;
+				line-height:1.256;
+			}
+
+			&.f12{
+				font-size:12px;
+				line-height:1.256;
+			}
+
+			&.f11{
+				font-size:11px;
+				line-height:1.256;
+			}
+
+			&.f10{
+				font-size:10px;
+				line-height:1.256;
+			}
+
+		}
+	
+} // VP320 END
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	@include media-min($bp-480) {
+
+	} // media-min END	
+
+} // VP480 END
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+	
+	@include media-min($bp-768) {
+	
+
+
+	.hide-mobile{
+		display: block;
+	}
+
+		//padding:0 8% 40px;
+
+		h1{
+			font-size:50px;
+			line-height:60px;
+			margin: 40px 0 30px;
+
+			/*&:after{
+				content:" 50/60/30 ";
+			}*/
+
+		}
+		
+		h2{
+			font-size:24px;
+			line-height:32px;
+			margin-bottom:5px;
+
+			/*&:after{
+				content:" 24/32 ";
+			}*/
+
+		}
+
+		h3{
+			font-size:20px;
+			line-height:27px;
+			margin:0 0 8px;
+
+			/*&:after{
+				content:" 20/27/8 ";
+			}*/
+		}
+
+		p{
+			font-size:18px;
+			line-height:26px;
+			margin:0 0 20px;
+
+			/*&:after{
+				content:" 18/26/20 ";
+			} */
+
+			&.preamble{
+				font-size:26px;
+				line-height:32px;
+				margin:0 0 20px;
+	
+				/*&:after{
+					content:" 26/32/20 ";
+				}*/
+
+			}
+
+			     &.small-text{
+	
+				margin:0 0 20px;
+
+				/*&:after{
+					content:" 14/17/20 ";
+				}*/
+
+			}
+
+
+		}
+	
+
+	} // media-min END		
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	@include media-min($bp-1024) {
+
+	} // media-min END	
+	
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1366
+////////////////////////////////////////////////////////////////
+
+
+@include VP1366 {
+	
+	@include media-min($bp-1366) {
+	
+
+		//padding:0 15% 40px;
+
+		/*h1{
+			font-size:60px;
+			line-height:71px;
+
+			&:after{
+				content:" 60/71 ";
+			}
+
+		}
+		
+		h2{
+			font-size:30px;
+			line-height:40px;
+			margin-bottom:10px;
+
+			&:after{
+				content:" 30/40 ";
+			}
+
+		}
+
+		p{
+			font-size:20px;
+			line-height:30px;
+			margin:0 0 16px;
+
+			&:after{
+				content:" 20/30 ";
+			}
+
+			&.preamble{
+				font-size:30px;
+				line-height:40px;
+
+				&:after{
+					content: "30/40 ";
+				}
+
+			}
+		} */
+
+
+	} // media-min END	
+	
+} // VP1366 END
+	
+
+
+	
+
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+	
+		.ie &{
+			
+		}
+
+		.ie8 &{
+			
+		}
+
+		.ie9 &{
+			
+		}
+
+	
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

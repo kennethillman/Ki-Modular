@@ -1,0 +1,330 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+HERO
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - MOBILE AND TOUCH FIRST
+// - - HOVER?
+// - MOBILE WIDE
+// - PHABLET
+// - TABLET
+// - LAPTOP
+// - TV
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// CLASS NAME
+$className: s-hero;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	display:table;
+	width:100%;
+	background-color:#1a1a1a;
+	//@include transition(background-color, 20s, ease-out, 0s);
+
+	> div{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		height: 650px;
+
+
+		h1{
+			@include transition(letter-spacing, 30s, ease-out, 0s);
+			font-family: 'Raleway', sans-serif;
+			font-size: 72px;
+			color:#f6f6f6!important;
+			font-weight: 200;
+			letter-spacing: 40px;
+			margin: 0 0 18px;
+			padding:0;	
+		}
+		
+		span{
+			display: block;
+			margin: 0 0 24px;
+			font-size: 18px;
+			letter-spacing: 4px;
+			color:#f6f6f6!important;
+			@include transition(letter-spacing, 30s, ease-out, 0s);
+		}
+
+	} // > div END
+
+
+
+
+
+	nav{
+		@include clearfix;
+		width: 100%;
+		text-align: center;
+		opacity:0;
+		@include transition(opacity, 2.5s, ease-out, 0.5s);
+
+		a{
+			//float:left;
+			font-size: 18px;
+			display: inline-block;
+			padding:10px 17px;
+			color:#1a1a1a;
+			
+			border-radius:8px;
+			position:relative;
+			overflow: hidden;
+			@include transition(border-radius, .35s, ease-out, 0s);
+
+			&:before{
+				content: '';
+				width: 0%;
+				height: 100%;
+				background:#333;
+				position:absolute;
+				top:0;
+				left:0;
+				z-index: -1;
+
+			}
+
+			&:hover{
+				text-decoration: none;
+				background:#eee;
+				border-radius:0px;
+				color:#111;
+			}
+
+			+ a{
+				margin-left: 6px;
+			}
+
+			
+
+		} 
+	}
+
+
+
+
+
+	&.-animate{
+		background-color:#1a1a1a;
+		> div {
+
+			h1{
+				letter-spacing: 10px;	
+			}
+			
+			
+			span{
+				letter-spacing: 0px;
+			}
+
+		}
+
+		nav{
+			opacity: 1;
+			a{
+				&.one{
+					&:before{
+						@include transition(width, 4.35s, ease-out, 0s);
+						width:100%;
+					}
+				}
+				&.two{
+					&:before{
+						@include transition(width, 2.75s, ease-out, 1s);
+						width:100%;
+					}
+				}
+				&.three{
+					&:before{
+						@include transition(width, 3.6s, ease-out, 2s);
+						width:100%;
+					}
+				}
+				&.four{
+					&:before{
+						@include transition(width, 4.6s, ease-out, 0s);
+						width:100%;
+					}
+				}
+				&.five{
+					&:before{
+						@include transition(width, 3.8s, ease-out, 1s);
+						width:100%;
+					}
+				}
+				&.six{
+					&:before{
+						@include transition(width, 5s, ease-out, 2s);
+						width:100%;
+					}
+				}
+
+			}
+		}
+
+	}
+	
+	
+} // VP320 END
+
+
+// Place in bottom, hover in specific breakpoints??
+////////////////////////////////////////////////////////////////
+// NO-TOUCH
+////////////////////////////////////////////////////////////////
+
+@include hover {
+	
+
+		.hover &{
+			
+				a:hover{
+					include: hover;
+				}
+
+		}
+
+	
+} // hover END
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	@include media-min($bp-480) {
+
+
+	} // media-min END	
+
+} // VP480 END
+
+
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+	
+	@include media-min($bp-768) {
+	
+
+	} // media-min END		
+
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	@include media-min($bp-1024) {
+	
+
+	} // media-min END	
+	
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1366
+////////////////////////////////////////////////////////////////
+
+@include VP1366 {
+	
+	@include media-min($bp-1366) {
+	
+
+	} // media-min END	
+	
+} // VP1366 END
+
+
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+	
+		.ie &{
+			
+		}
+
+		.ie8 &{
+			
+		}
+
+		.ie9 &{
+			
+		}
+
+	
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+	.no-js &{
+		
+	}
+
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

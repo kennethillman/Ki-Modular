@@ -1,0 +1,516 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+TEMPLATE
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - MOBILE AND TOUCH FIRST
+// - - HOVER?
+// - MOBILE WIDE
+// - PHABLET
+// - TABLET
+// - LAPTOP
+// - TV
+//
+// - - MS Internet explorer
+// - - NO JavaScript
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////// For SASS Compile
+//@import "../../ui--CORE/__dev-sass/_variables.scss";
+//@import "../../ui--CORE/__dev-sass/_mixins.scss";
+//@import "../../ui--CORE/__dev-sass/_breakpoint-mixins.scss";
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+body{
+	&.fix-it{
+		margin-top:140px;
+	}
+
+		&.eon-loading{
+
+			* {
+				display:none;
+			}
+		
+	}
+}
+
+
+
+/// GLOBAL TEMP
+
+.eon-s-global{
+	@include clearfix();
+	background:#f3f3f3;
+
+	nav{
+		float: right;
+		@include clearfix();
+	}
+
+	a{
+		float: left;
+		line-height: 1;
+		font-size: 14px;
+		color:#666;
+		display: inline-block;
+		padding:4px 20px 4px;
+		margin:6px 0;
+
+		&:hover{
+			text-decoration: none;
+			color:#666;
+		} 
+
+		+ a{
+			border-left:1px solid #d7d7d7;
+		}
+
+		&.active{
+			color:$red-3;
+		}
+
+	}
+}
+
+/// FOOTER TEMP
+
+.eon-s-footer{
+	height:200px;
+	margin-top:60px;
+	background:#f3f3f3;
+	position:relative;
+
+	.btn-round{
+		position:absolute;
+		top:-20px;
+		left:50%;
+		margin-left: -30px;
+		width: 60px;
+		height: 60px;
+		background:#f3f3f3;
+
+		@include border-radius(60px);
+
+		&:before{
+			font-size: 20px;
+			line-height: 50px;
+			color:$red-3;	
+			display: block;
+			text-align:center;
+		}
+
+		&:hover{
+			text-decoration:none;
+			&:before{
+				color:$red-4;	
+			}
+		}
+
+	}
+}
+
+// HEADER DIVIDER TEMP
+
+.eon-s-header-divider{
+	text-align:center;
+
+	padding:0 0 20px;
+
+		h2{
+			color:#767676;
+			font-size: 40px;
+			font-family: $font-4;
+			line-height: 1;
+		}
+
+		a{
+			display: block;
+			margin:10px 0 0;
+
+		}
+
+}
+
+
+//////// CLASS NAME
+$className: eon-section-header;
+$nav: eon-section-navigation;
+
+
+.#{$className}{
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+
+
+
+margin-bottom:20px;
+
+
+
+	position:relative;
+	z-index:2;
+	
+	 -webkit-perspective: 1200px;
+	 perspective: 1200px;
+	 -webkit-transform-style: preserve-3d;
+	 transform-style: preserve-3d;
+
+	height:60px;
+	//overflow:hidden;
+	position:relative;
+
+
+	//@include transition(margin-top, .2s, ease-out, 0s);
+	@include transition(height, 1.16s, ease, 0s);
+	
+
+
+			.show-myPages &{
+
+				height:150px;
+				@include transition(height, 1.16s, ease, 0s);
+
+			/*	visibility: visible;
+				-webkit-transition: -webkit-transform 1s;
+				transition: transform 1s;
+				-webkit-transform: translate3d(0, 0, 0) rotateX(0deg);
+				transform: translate3d( 0, 0, 0) rotateX(0deg);*/
+
+			}
+
+			/*.animate-out &{
+				margin-top: 90px;
+			} */
+
+	.fix-it &{
+		position:fixed;
+		top:-90px;
+		left:0;
+		width:100%;
+		z-index:10;
+		margin-top: 0px;
+	}
+
+
+	.#{$nav}{
+		background:$red-3;
+		height:60px;
+		//visibility: hidden;
+		width:100%;
+		position:absolute;
+		bottom:0;
+		z-index:1;
+
+
+
+	/*	-webkit-transform: translate3d(0, 0, 0) rotateX(90deg);
+		transform: translate3d(0, 0, 0) rotateX(90deg);
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;*/
+
+			.show-myPages &{
+
+				//height:180px;
+
+			/*	visibility: visible;
+				-webkit-transition: -webkit-transform 1s;
+				transition: transform 1s;
+				-webkit-transform: translate3d(0, 0, 0) rotateX(0deg);
+				transform: translate3d( 0, 0, 0) rotateX(0deg);*/
+
+			}
+
+
+	} // nav END
+
+
+			// Logo
+			.eon-logo{
+				
+				width: 80px;
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				margin-left: -40px;
+
+				a{
+					font-size:60px;
+				}
+
+			}
+
+			// MOBILE MENU TRIGGER
+			.eon-mobileMenu-trigger{
+				float:left;
+				a{
+					font-size:32px;
+				}
+			}
+
+
+			// Normalize
+			menu{
+				padding:0;
+				margin:0;
+
+				menu{
+					display:none;
+				}
+
+				li{
+					list-style-type:none;
+				}
+			}
+
+
+			// Common navigation
+				li{
+					float:left;
+				}
+
+				a{
+					color:$white;
+					line-height:40px;
+					height:40px;
+					padding:0 8px;
+					text-decoration:none;
+					font-size:16px;
+					display:block;
+					
+					&:hover{
+						background:$red-4;
+					}
+				}
+
+
+			// Main navigation
+			.eon-main-nav{
+				display:none;
+			}// .eon-main-nav END
+
+
+			// Global / Extra navigation
+			.eon-globalAndExtra-nav{
+				float:right;
+				[class*="eon-icon-"]{
+					font-size:28px;
+				} 
+
+				li{
+					//border-left:1px solid $red-4;
+					display:none;
+					&.extra-3{
+						display:inline-block;
+					}
+				}
+
+			}// .eon-globalAndExtra-nav END
+
+		
+} // VP320 END
+
+
+// Place in bottom, hover in specific breakpoints??
+////////////////////////////////////////////////////////////////
+// NO-TOUCH
+////////////////////////////////////////////////////////////////
+
+@include hover {
+		
+		.hover &{
+			
+				a:hover{
+					
+				}
+
+		}
+
+} // hover END
+
+
+////////////////////////////////////////////////////////////////
+// VP480
+////////////////////////////////////////////////////////////////
+
+@include VP480 {
+	
+	@include media-min($bp-480) {
+		include: VP480;
+
+	} // media-min END	
+
+} // VP480 END
+
+
+////////////////////////////////////////////////////////////////
+// VP768
+////////////////////////////////////////////////////////////////
+
+@include VP768 {
+	
+	@include media-min($bp-768) {
+	
+
+margin-bottom:40px;
+
+		.eon-mobileMenu-trigger{
+				display:none;
+			}
+
+			// Logo
+			.eon-logo{
+				
+				width: auto;
+				display: inline-block;
+				float:left;
+				position: static;
+				left: 50%;
+				margin-left: 0;
+
+				a{
+					font-size:74px;
+				}
+
+			}
+
+			// Common navigation
+
+				li{
+					float:left;
+				}
+
+				a{
+					line-height:60px;
+					height:60px;
+					padding:0 15px;
+					font-size:22px;
+				}
+
+
+			// Main navigation
+			.eon-main-nav{
+				float:left;
+				display:block;
+			}// .eon-main-nav END
+
+			// Global / Extra navigation
+			.eon-globalAndExtra-nav{
+
+				[class*="eon-icon-"]{
+					font-size:32px;
+				} 
+
+				li{
+					border-left:1px solid $red-4;
+					display:inline-block;
+				}
+
+			}// .eon-globalAndExtra-nav END
+
+	} // media-min END	
+	
+} // VP768 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1024
+////////////////////////////////////////////////////////////////
+
+@include VP1024{
+	
+	@include media-min($bp-1024) {
+	
+		include: VP1024;
+
+	} // media-min END	
+	
+} // VP1024 END
+
+
+////////////////////////////////////////////////////////////////
+// VP1366
+////////////////////////////////////////////////////////////////
+
+@include VP1366 {
+	
+	@include media-min($bp-1366) {
+	
+		include: VP1366;
+
+	} // media-min END	
+	
+} // VP1366 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+
+		.ie &{
+			
+		}
+
+		.ie8 &{
+			
+		}
+
+		.ie9 &{
+		
+		}
+
+} // msie END
+
+
+////////////////////////////////////////////////////////////////
+// NO-JAVASCRIPT
+////////////////////////////////////////////////////////////////
+
+@include no-js {
+	
+		.no-js &{
+			
+		}
+	
+} // no-js END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+} // END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

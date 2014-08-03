@@ -1,0 +1,154 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// BREAKPOINT MIXINS
+// 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - MQ SETUP
+// - - Decice
+// - - Size
+// - - Viewport
+//
+// - - BREAKPOINTS
+//
+// - - EXTRAS
+// - - - msie
+// - - - no-rwd
+// - - - no-js
+// - - - hover (experimental)
+//
+// - - CHOICE BY OPTION (experimental)
+// - - - couch
+// - - - on-the-go
+// - - - speach
+// - - - leap
+//
+// - CONTENT MIXINS
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MQ SETUP
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// MQ Device
+$mobileAndTouch-first: 		false !default;	//  Default 	(content 300px)
+$mobileWide: 				false !default;	//  min 480px   (content 460px)
+$phablet: 					false !default; //  min 768px	(content 748px)
+$tablet: 					false !default; //  min 940px	(content 940px)
+$laptop: 					false !default; //  min 1441px	(content 1176px)
+$tv: 						false !default; //  min 1920px	(content 1364px)
+
+$bp-mobileWide: 			480px;	//  min 480px   (content 460px)
+$bp-phablet: 				768px; 	//  min 768px	(content 748px)
+$bp-tablet: 				940px; 	//  min 940px	(content 940px)
+$bp-laptop: 				1441px; //  min 1441px	(content 1176px)
+$bp-tv: 					1820px; //  min 1920px	(content 1364px)
+
+ 
+// MQ Size
+$xSmall: 					false !default;	
+$small: 					false !default;
+$medium: 					false !default; 
+$large: 					false !default; 
+$largeA: 					false !default; 
+$largeB: 					false !default;
+$largeC: 					false !default; 
+$xLarge: 					false !default; 
+$xxLarge: 					false !default; 
+
+
+// MQ Viewport
+$VP320: 					false !default;
+$VP480: 					false !default;
+$VP600: 					false !default;
+$VP768: 					false !default;
+$VP1024: 					false !default;
+$VP1280: 					false !default;
+$VP1366: 					false !default; 
+$VP1440: 					false !default; 
+$VP1680: 					false !default; 
+$VP1920: 					false !default;
+
+// Breakpoints
+$bp-480: 					480px;	//  min 480px   (content 460px)
+$bp-768: 					768px; 	//  min 768px	(content 748px)
+$bp-1024: 					940px; 	//  min 940px	(content 940px)
+$bp-1366: 					1300px; //  min 1300px	(content 1176px)
+
+
+////// Extras
+$msie: 						false !default; // Extra styles for legacy Internet explorer
+$no-rwd: 					false !default; // Serve styles for devices/ browsers not supporting MQ (Same as msie??)
+$no-js: 					false !default;
+$hover: 					false !default; // .no-touch (how to make this for every breakpoint, nest content mixins? dose it work?)
+
+
+////// Choice by option
+$couch: 					false !default;
+$on-the-go: 				false !default; // On the go, super simpel navigation, fast interaction.
+$speach: 					false !default;
+$leap: 						false !default;
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CONTENT MIXINS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//// MQ Setup
+
+
+// MQ Device
+@mixin mobileAndTouch-first { @if $mobileAndTouch-first { @content; } }
+@mixin mobileWide 			{ @if $mobileWide 			{ @content; } }
+@mixin phablet 				{ @if $phablet 				{ @content; } }
+@mixin tablet 				{ @if $tablet 				{ @content; } }
+@mixin laptop 				{ @if $laptop 				{ @content; } }
+@mixin desktop 				{ @if $desktop 				{ @content; } }
+@mixin tv 					{ @if $tv 					{ @content; } }
+
+// MQ Size
+@mixin xSmall 				{ @if $xSmall 				{ @content; } }
+@mixin small 				{ @if $small 				{ @content; } }
+@mixin medium 				{ @if $medium 				{ @content; } }
+@mixin large 				{ @if $large 				{ @content; } }
+@mixin largeA 				{ @if $largeA 				{ @content; } }
+@mixin largeB 				{ @if $largeB 				{ @content; } }
+@mixin largeC 				{ @if $largeC 				{ @content; } }
+@mixin xLarge 				{ @if $xLarge 				{ @content; } }
+@mixin xxLarge 				{ @if $xxLarge 				{ @content; } }
+
+// MQ Viewport 
+@mixin VP320 				{ @if $VP320				{ @content; } }
+@mixin VP480 				{ @if $VP480				{ @content; } }
+@mixin VP600 				{ @if $VP600				{ @content; } }
+@mixin VP768 				{ @if $VP768				{ @content; } }
+@mixin VP1024 				{ @if $VP1024				{ @content; } }
+@mixin VP1280 				{ @if $VP1280				{ @content; } }
+@mixin VP1366 				{ @if $VP1366				{ @content; } }
+@mixin VP1440 				{ @if $VP1440				{ @content; } }
+@mixin VP1680 				{ @if $VP1680				{ @content; } }
+@mixin VP1920 				{ @if $VP1920				{ @content; } }
+
+
+////// Extras
+@mixin msie 				{ @if $msie 				{ @content; } }
+@mixin no-rwd 				{ @if $no-rwd 				{ @content; } }
+@mixin no-js 				{ @if $no-js 				{ @content; } }
+@mixin hover 				{ @if $hover 				{ @content; } }
+
+////// Choice by option
+@mixin couch 				{ @if $couch 				{ @content; } }
+@mixin on-the-go 			{ @if $on-the-go 			{ @content; } }
+@mixin speach 				{ @if $speach 				{ @content; } }
+@mixin leap 				{ @if $leap 				{ @content; } }
+
+
