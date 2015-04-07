@@ -1,0 +1,16 @@
+// VARIABLES and MIXINS for handling css compiling
+@import "../../__common-sass/_breakpoint-mixins.scss";
+
+// Set the breakpoint to true that you want to imoprt 
+$FMRW: true;
+$VP1280: true;
+
+// If bundled include the media queries INLINE.
+$fix-mqs: $bp-1280;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VP 1280 */ 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@import '_core-rw';
