@@ -1,0 +1,115 @@
+
+/////////////////////////////////////////////////////////////////////////
+// _variables-global.scss 
+/////////////////////////////////////////////////////////////////////////
+//
+// - Framework
+// - Z-Index
+// - Font familys
+// - Media queries
+// - Paths 
+//
+//
+/////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// GLOBAL 
+/////////////////////////////////////////////////////////////////////////
+
+
+// Full site prefix
+$prefix: mo-;
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// COLORS  
+/////////////////////////////////////////////////////////////////////////
+
+$black:			#2b2727 !default;
+$white:			#fff !default;
+
+// BLUE
+$blue-lm:		#a5b6c1 !default;
+$blue-lom:		#c6c9cc !default;
+$blue-dm:		#394042 !default;
+$blue-dom:		#303131 !default;
+
+// TURQOUSIE
+$turq-lm:		#adc2bf !default;
+$turq-lom:		#c4cccb !default;
+$turq-dm:		#3c4344 !default;
+$turq-dom:		#303232 !default;
+
+// GREEN
+$green-lm:		#b5c1b8 !default;
+$green-lom:		#c5ccc5 !default;
+$green-dm:		#424742 !default;
+$green-dom:		#343734 !default;
+
+// BEIGE
+$beige-lm:		#c1beaf !default;
+$beige-lom:		#cbcac4 !default;
+$beige-dm:		#464641 !default;
+$beige-dom:		#353532 !default;
+
+
+// BEIGE
+$beige-lm:		#c1beaf !default;
+$beige-lom:		#cbcac4 !default;
+$beige-dm:		#464641 !default;
+$beige-dom:		#353532 !default;
+
+
+// BEIGE
+$int-blue:		#0046f3 !default;
+$int-green:		#00d98e !default;
+$int-red:		#e02100 !default;
+$int-yellow:	#ffe200 !default;
+$int-gray:		#4c4b49 !default; // ?? From komponents.psd... NEW ALREADY?? 
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Font familys
+/////////////////////////////////////////////////////////////////////////
+
+
+
+// Trade gothic
+$font-a: "TradeGothic", Arial, sans-serif;
+
+// Akkurat
+$font-b: "Akkurat", Arial, sans-serif;
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Paths for catalogs (For cross reference)
+/////////////////////////////////////////////////////////////////////////
+
+// Image paths: 
+$path-images: "/Templates/Shared/Images/";
+$path-styles: "/Templates/Shared/Images/";
+$path-icons: "/Templates/Shared/Images/";
+$path-fonts: "/Templates/Shared/Images/";
+$path-scripts: "/Templates/Shared/Images/";
+$path-libs: "/Templates/Shared/Images/";
+
+
+
+// Ex.
+// background: url('#{$imagepath-shared}imagename.jpg') no-repeat;
+// background: url('#{$imagepath-recruitment}imagename.jpg') no-repeat;
+// background: url('#{$imagepath-gmu}imagename.jpg') no-repeat;
+// background: url('#{$imagepath-corporate}imagename.jpg') no-repeat;
+
+
+

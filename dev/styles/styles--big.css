@@ -1,0 +1,14 @@
+/* Big */
+/*
+CORE - SASS IMPORTS
+*/
+/*
+TYPOGRAPHY
+*/
+@media screen and (min-width: 941px) {
+  [class^="mo-"] {
+    font-size: 20px; } }
+
+/*
+BUTTONS & LINKS
+*/

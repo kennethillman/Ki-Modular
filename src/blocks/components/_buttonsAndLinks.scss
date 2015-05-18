@@ -1,0 +1,237 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+BUTTONS & LINKS
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Links
+// - - Buttons
+//
+//
+// - - RWD 
+
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// (i) -> Scoped so only everything inside prefix will inherit
+// (i) -> "$prefix" is inherited from -> src/core/_sass/_variables.scss 
+
+
+[class ^= "#{$prefix}"] {
+
+
+////////////////////////////////////////////////////////////////
+// VP320 - MOBILE AND TOUCH FIRST
+////////////////////////////////////////////////////////////////
+
+@include VP320 {
+
+
+////// LINKS
+
+	a {
+		color:$link;
+		text-decoration:underline;
+		position:relative;
+		outline: none!important; 
+
+		&:link{
+			
+		} 
+
+		&:hover{
+			text-decoration:underline;
+			color:$link-hover;
+		} 
+
+		&:visited{
+			
+		} 
+
+		&:active{
+			color:$link-click;
+		} 
+
+		&:focus{
+			color:$link-click;	
+		} 
+
+
+		// Bold 
+		&.-bold{
+			font-weight: bold;
+		}
+
+	} // a END
+
+
+
+
+////// BUTTONS
+
+	.btn {
+		@include border-radius(4px);
+		background:red;
+		border:none; // Needed for input
+		border-bottom:4px solid #000;
+		line-height:1;
+		color:#fff;
+		font-size:13px;
+		font-weight:bold;
+		padding:12px 40px;
+		display:inline-block;
+		position:relative;
+		text-decoration:none;
+		
+		&:hover{
+			text-decoration:none;
+			background:#333;
+			border-bottom:4px solid #333;
+			color:#fff;
+		} 
+
+		&:visited{
+			
+		} 
+
+		&:active{
+			background:#333;
+			border-bottom:4px solid #333;	
+			color:#fff;
+		} 
+
+		&:focus{
+			outline:none;
+		}
+
+		// Sizes
+		&.tsr-btn-small{
+			padding:12px 30px;
+		}
+
+		&.tsr-btn-large{
+			font-size:15px;
+			padding:18px 40px;
+		}
+
+
+		// 100% width
+		&.tsr-btn-100 { 
+			display:block;
+			text-align:center;
+		}		 
+
+
+		// Purple
+		&.tsr-btn-purple { 
+			background:#777;
+			border-bottom:4px solid #777;
+
+			&:hover{
+				background:#555;
+				border-bottom:4px solid #777;
+			} 
+
+			&:visited{
+				
+			} 
+
+			&:active{
+				background:#777;
+				border-bottom:4px solid #777;	
+			} 
+
+			&:focus{
+
+			}
+			
+		}
+
+	
+
+		// Disabled
+		&.-disabled, 
+		&:disabled{
+			background:#a4a5a6;
+			border-bottom:4px solid #959595;
+			color:rgba(255,255,255,.8);
+			cursor:default;
+
+			&:hover{
+				background:#a4a5a6;
+				border-bottom:4px solid #959595;
+				color:rgba(255,255,255,.8);
+				cursor:default;
+			}
+
+		}
+
+	    // Touch normalize (Hover + focus, Active, )
+		.touch & {
+			
+			text-decoration:none;
+
+				&:hover,
+				&:focus{
+					text-decoration:none;
+				} 
+
+				&:active{
+					text-decoration:none;
+				} 
+
+		} // .touch END	
+
+	} // .bth-v1 END
+
+
+} // VP320 END
+
+
+////////////////////////////////////////////////////////////////
+// MSIE - INTERNET EXPLORER
+////////////////////////////////////////////////////////////////
+
+@include msie {
+
+		.msie-8 &{
+			
+		}
+
+		.msie-9 &{
+			
+		}
+
+} // msie END
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// END
+
+
+
+} // END [class ^= "#{$prefix}"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
